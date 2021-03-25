@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lietuva</title>
+    <style>
+      html {
+        width: 100%;
+        height: 100%;
+        display: table;
+       
+      }
+      body {
+        background: linear-gradient(#f0f7ef, #82b182);
+        font-family: monospace;
+        width: 100%;
+        display: table-cell;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+}
+      h1 {
+        text-align: center;
+        color: #265147;
+      }
+      h2 {
+        text-align: center;
+        color: #265147;
+        border: 1px solid #265147;
+        font-size: 18px;
+        border-radius: 8px;
+        padding: 5px;
+      }
+      #img1 {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        padding: 20px;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 15px;
+        margin: 30px 0 10px;
+        text-align: center;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        background: #265147;
+        color: white;
+        font-size: 16px;
+        font-weight: bolder;
+        font-family: monospace;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px;
+      }
+      .why-visit {
+        display: block;
+        margin: 10px 10px 20px;
+        text-decoration: none;
+        color: #265147;
+      }
+      .why-visit:hover {
+        text-decoration: underline;
+      }
+      .footer {
+        text-align: center;
+      }
+      .description {
+        font-style: italic;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>
+        Lithuania
+      </h1>
+      <h2>
+        A Land of Forests and Lakes
+      </h2>
+      <img
+        id="img1"
+        src="https://cdn4.onlithuania.com/content/uploads/2016/11/20161022_202907-01.jpeg"
+        alt="Lithuania"
+      />
+
+      <p>
+        You are small, you easily find room in the palms of a Čiurlionis'
+        King...
+        <br />
+        You are like a slice of
+        <span class="description">wholesome bread </span>on the festive table of
+        the world...<br />On the globe you are a tiny patch, a steel plate from
+        a Grünwald suit of armour, <br />A trace of Pirčiupis ablaze with blood,
+        a crystal droplet of a <span class="description">sky-blue lake</span>,
+        <br />A bright green sunrise over fallow lands, a rain of sunbeams on a
+        city square. <br />On the globe you are an
+        <span class="description">amber speck</span> with the scent of pinewood
+        and the gleam of blood... <br />Only in our love you're truly great and
+        in our palms you are invincible <br />And in our dreams you are a
+        fairy-tale and in our eyes you are a land of sunshine. <br />
+        <a
+          href="https://www.telegraph.co.uk/travel/destinations/europe/lithuania/articles/reasons-to-visit-lithuania-why-go-attractions-things-to-do/"
+          target="blank"
+          class="why-visit"
+        >
+          Reasons why you <strong> have to </strong>to visit
+        </a>
+      </p>
+      <button class="visit-button">
+        Visit Lithuania 🌳
+      </button>
+      <hr />
+      <p class="footer">
+        This page was built by Agnita Januskeviciute
+      </p>
+    </div>
+
+    <script>
+      function visit() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let country = prompt("Where do you live?");
+
+        if (name.length > 0 && email.length > 0) {
+          alert(
+            "Thank you " +
+              name +
+              "! We will be in touch soon. We look forward to welcoming you in Lithuania from " +
+              country +
+              " ! 😊✈"
+          );
+        } else {
+          alert(
+            "Thank you! Unfortunately we did not get your full details, please fill in again and we will be in touch with you soon!"
+          );
+        }
+      }
+      let visitButton = document.querySelector(".visit-button");
+      visitButton.addEventListener("click", visit);
+    </script>
+  </body>
+</html>
